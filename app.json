@@ -1,0 +1,7 @@
+{
+  "name": "scrape-ycsd-aspen",
+  "description": "scrape ycsd aspen information",
+  "repository": "https://github.com/wallyatkins/scrape-ycsd-aspen",
+  "logo": "https://avatars2.githubusercontent.com/u/135756?v=4&s=40",
+  "keywords": ["ycsd", "aspen"]
+}
