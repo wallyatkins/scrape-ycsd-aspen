@@ -27,12 +27,6 @@ public class WorkerProcess {
 
 		while (true) {
 			
-			try {
-				Thread.sleep(3600000); // sleep for six hours
-			} catch (InterruptedException e) {
-				Logger.getAnonymousLogger().log(Level.WARNING, "[Thread] Interrupted");
-			}
-
 			// Hush the CSS and JavaScript error and warning logs
 			Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF);
 
@@ -190,6 +184,13 @@ public class WorkerProcess {
 			} catch (IOException ex) {
 				Logger.getAnonymousLogger().log(Level.WARNING, "[GitHub] Exception Occurred");
 				ex.printStackTrace();
+			}
+			
+			// Run the full process then sleep for a bit
+			try {
+				Thread.sleep(3600000); // sleep for six hours
+			} catch (InterruptedException e) {
+				Logger.getAnonymousLogger().log(Level.WARNING, "[Thread] Interrupted");
 			}
 		}
 	}
